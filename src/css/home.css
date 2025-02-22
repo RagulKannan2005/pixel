@@ -1,0 +1,168 @@
+/* General Styles */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@300;400;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  color: #ff004f; /* Squid Game Neon Pink */
+  overflow-x: hidden;
+}
+
+/* Title Animation - Squid Game Style */
+h1 {
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #ff004f, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0% {
+    text-shadow: 0 0 5px #ff004f, 0 0 10px #ff004f;
+  }
+  100% {
+    text-shadow: 0 0 20px #ff004f, 0 0 40px #ff0000;
+  }
+}
+
+/* Centering Content */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Glassmorphism for Content Box */
+.text-container {
+  background: rgba(255, 0, 79, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 30px rgba(255, 0, 79, 0.2);
+  border: 2px solid rgba(255, 0, 79, 0.4);
+  animation: float 5s infinite alternate;
+}
+
+/* Floating Effect */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #ff004f;
+}
+
+/* Input Box Styling */
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  background: rgba(255, 0, 79, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  padding: 15px;
+  border: 2px solid rgba(255, 0, 79, 0.3);
+  box-shadow: 0 4px 30px rgba(255, 0, 79, 0.2);
+  animation: float 5s infinite alternate;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 0, 79, 0.2);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+  background: rgba(255, 0, 79, 0.4);
+}
+
+/* Glowing Button */
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(45deg, #ff004f, #ff0000);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 0, 79, 0.8);
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  margin-top: 30px;
+  border-collapse: collapse;
+  background: rgba(255, 0, 79, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(255, 0, 79, 0.2);
+  border: 2px solid rgba(255, 0, 79, 0.3);
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 0, 79, 0.2);
+}
+
+th {
+  background: linear-gradient(45deg, #ff004f, #ff0000);
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+td {
+  color: #fff;
+}
+
+.instuctions {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+}
+
+.buttons{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+}
